@@ -52,9 +52,9 @@ public class View extends JFrame {
 		contentPane.setBorder(new EmptyBorder(5, 5, 5, 5));
 		setContentPane(contentPane);
 		contentPane.setLayout(null);
-		Weather weather = new Weather();
-		Request req = new Request(weather);
-		Manage manage = new Manage(req, weather);
+		 
+	
+		Manage manage = new Manage(new Request(new Weather()), new Weather());
 		txtIn = new JTextField();
 		txtIn.setBounds(49, 71, 118, 20);
 		contentPane.add(txtIn);
@@ -86,7 +86,7 @@ public class View extends JFrame {
 		btnSend.setBounds(204, 70, 89, 23);
 		contentPane.add(btnSend);
 
-		lblIn = new JLabel("New label");
+		lblIn = new JLabel("");
 		lblIn.setBounds(176, 151, 148, 83);
 		contentPane.add(lblIn);
 	}
